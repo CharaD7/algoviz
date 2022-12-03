@@ -2,8 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
-import Learn from './Learn/learn'
-import Visuals from './Visuals/visuals'
 
 export default function Home() {
   return (
@@ -37,6 +35,14 @@ export default function Home() {
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </Link>
 
+          <Link href="/Practice/practice" className={styles.card}>
+            <h2>Practice Page &rarr;</h2>
+            <p>Learn about the project in an interactive course with quizzes!</p>
+          </Link>
+          <Link href="/Explain/explain" className={styles.card}>
+            <h2>Explain Page &rarr;</h2>
+            <p>Know more about the project in detail</p>
+          </Link>
         </div>
       </main>
 
