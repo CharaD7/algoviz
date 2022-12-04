@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --quiet --fix"
+    "lint": "next lint --quiet --fix",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "eslint": "8.29.0",
@@ -24,8 +25,12 @@
     "prettier": "^2.8.0"
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "npm run lint",
+    "*.{js,jsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js,*.jsx": [
+      "eslint --fix",
       "git add"
     ]
   },
