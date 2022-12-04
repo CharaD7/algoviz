@@ -26,12 +26,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.js,*.jsx": [
-      "eslint --fix",
-      "git add"
+      "next lint"
     ]
   },
   "husky": {
