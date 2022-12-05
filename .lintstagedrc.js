@@ -13,5 +13,6 @@ const buildPrettierCommand = (filenames) =>
   `prettier --loglevel silent --write --ignore-unknown ${filenames.join(' ')}}`
 
 module.exports = {
-  '*.{js,jsx,ts,tsx}': [buildEslintCommand, buildPrettierCommand],
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
+  '*.{js,jsx,ts,tsx,css,md}': [buildPrettierCommand],
 }
