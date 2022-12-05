@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.homeBackGround {
+  background-color: #000000;
+  color: white;
+}
 * {
   box-sizing: border-box;
 }
