@@ -1,0 +1,10 @@
+# .estlintignore file
+.next
+dist
+node_modules/
+build
+lib
+public
+
+# Ignore coverage
+coverage

@@ -1,7 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+import Learn from './Learn/learn';
+import Visuals from './Visuals/visuals';
 
 export default function Home() {
   return (
@@ -17,11 +19,8 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-
-
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+          Get started by editing <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
@@ -33,15 +32,6 @@ export default function Home() {
           <Link href="/Visuals/visuals" className={styles.card}>
             <h2>Visuals Page &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </Link>
-
-          <Link href="/Practice/practice" className={styles.card}>
-            <h2>Practice Page &rarr;</h2>
-            <p>Learn about the project in an interactive course with quizzes!</p>
-          </Link>
-          <Link href="/Explain/explain" className={styles.card}>
-            <h2>Explain Page &rarr;</h2>
-            <p>Know more about the project in detail</p>
           </Link>
         </div>
       </main>
@@ -59,5 +49,5 @@ export default function Home() {
         </a>
       </footer>
     </div>
-  )
+  );
 }
