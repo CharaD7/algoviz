@@ -1,9 +1,36 @@
 {
-  "plugins": ["prettier", "jest"],
-  "extends": ["eslint:recommended", "next", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:jest/recommended",
+    "plugin:@next/next/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "jest",
+    "@next/next",
+    "prettier",
+    "react",
+    "simple-import-sort"
+  ],
   "rules": {
-        "prettier/prettier": ["error", { 
-          "endOfLine": "auto"
-        }]
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error"
   }
 }

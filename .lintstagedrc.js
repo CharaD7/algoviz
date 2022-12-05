@@ -9,6 +9,9 @@ const path = require('path')
 const buildEslintCommand = (filenames) =>
   `eslint --quiet --fix ${filenames.join(' ')}`
 
+const buildPrettierCommand = (filenames) =>
+  `prettier --loglevel silent --write --ignore-unknown ${filenames.join(' ')}}`
+
 module.exports = {
-  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
+  '*.{js,jsx,ts,tsx}': [buildEslintCommand, buildPrettierCommand],
 }
