@@ -1,0 +1,20 @@
+# Ignore:
+node_modules
+package-lock.json
+yarn.lock
+public
+
+# Ignore build output
+dist
+build
+lib
+public
+
+# Ignore coverage
+coverage
+
+#nextJS
+.next
+.cache
+next-env.d.ts
+next.config.ts
