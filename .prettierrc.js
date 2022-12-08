@@ -1,8 +1,18 @@
 module.exports = {
     semi: true,
     bracketSpacing: true,
-    singleQuote: true,
-    trailingComma: "all",
+    importOrder: [
+        '^@core/(.*)$',
+        '<THIRD_PARTY_MODULES>',
+        '^@components/(.*)$',
+        '^@app/(.*)$',
+        '^@styles/(.*)$',
+        '^[./]',
+    ],
+    importOrderSeparation: true,
+    importOrderSortSpecifiers: true,
     printWidth: 120,
-    tabWidth: 4
+    singleQuote: true,
+    tabWidth: 4,
+    trailingComma: 'all',
 };
