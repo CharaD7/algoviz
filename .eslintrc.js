@@ -9,9 +9,7 @@ module.exports = {
         'eslint:recommended',
         'next',
         'next/core-web-vitals',
-        'plugin:import/errors',
         'plugin:import/recommended',
-        'plugin:import/warnings',
         'plugin:@next/next/recommended',
         'prettier',
     ],
@@ -19,10 +17,62 @@ module.exports = {
         ecmaFeatures: { jsx: true },
         project: ['./jsconfig.json'],
         ecmaVersion: 12,
-        sourceTypr: 'module',
+        sourceType: 'module',
     },
-    plugins: ['@next/next', 'prettier', 'react'],
+    plugins: ['@next/next', 'prettier', 'react', 'simple-import-sort'],
+    root: true,
     rules: {
+        'import/first': 'error',
+        'import/newline-after-import': ['error'],
+        'import/no-unresolved': ['error', { commonjs: true }],
+        'import/no-extraneous-dependencies': 'error',
+        'import/order': [
+            'error',
+            {
+                groups: ['builtin', 'external', 'internal', ['parent', 'sibling'], 'index', 'object', 'type'],
+                pathGroups: [
+                    {
+                        pattern: '^react',
+                        group: 'builtin',
+                        position: 'before',
+                    },
+                    {
+                        pattern: 'next/**',
+                        group: 'builtin',
+                    },
+                    {
+                        pattern: '~core/**',
+                        group: 'internal',
+                    },
+                    {
+                        pattern: '~components/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '~app/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                    {
+                        pattern: '~styles/**',
+                        group: 'external',
+                        position: 'after',
+                    },
+                    {
+                        pattern: './**',
+                        group: 'sibling',
+                        position: 'after',
+                    },
+                ],
+                pathGroupsExcludedImportTypes: ['react'],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: true,
+                },
+            },
+        ],
         'no-unused-vars': 'warn',
         'prettier/prettier': [
             'error',
@@ -30,19 +80,20 @@ module.exports = {
                 endOfLine: 'auto',
             },
         ],
+        'simple-import-sort/exports': 'error',
+        'simple-import-sort/imports': 'error',
     },
     settings: {
         'import/resolver': {
             alias: {
-                exceptions: ['*.module.css'],
-                extensions: ['.js', '.jsx', '.ts', '.tsx'],
                 map: [
-                    ['@app', './app'],
-                    ['@components', './components'],
-                    ['@styles', './styles'],
+                    ['~app', './app'],
+                    ['~components', './components'],
+                    ['~styles', './styles'],
                 ],
+                exceptions: ['*.module.css', '.lintstagedrc.js'],
+                extensions: ['.js', '.jsx'],
             },
-            node: true,
         },
     },
 };

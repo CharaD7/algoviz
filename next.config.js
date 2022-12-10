@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    basePath: '/app',
     experimental: {
         appDir: true,
     },
     reactStrictMode: true,
     swcMinify: true,
     eslint: {
-        dirs: ['pages', 'components', 'public', 'lib', 'utils'],
+        dirs: ['app', 'components', 'lib', 'pages', 'public', 'utils'],
     },
 };
 
