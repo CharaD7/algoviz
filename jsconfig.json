@@ -2,24 +2,12 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "~components": [
-                "./components"
-            ],
-            "~components/*": [
-                "./components/*"
-            ],
-            "~pages": [
-                "./pages"
-            ],
-            "~pages/*": [
-                "./pages/*"
-            ],
-            "~styles": [
-                "./styles"
-            ],
-            "~styles/*": [
-                "./styles/*"
-            ]
+            "~components": ["./components"],
+            "~components/*": ["./components/*"],
+            "~pages": ["./pages"],
+            "~pages/*": ["./pages/*"],
+            "~styles": ["./styles"],
+            "~styles/*": ["./styles/*"]
         }
     }
 }
