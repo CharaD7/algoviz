@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-        appDir: true,
-    },
     reactStrictMode: true,
     swcMinify: true,
     eslint: {
-        dirs: ['app', 'components', 'lib', 'pages', 'public', 'utils'],
+        dirs: ['components', 'lib', 'pages', 'public', 'utils'],
     },
 };
 

@@ -16,12 +16,12 @@ export default function Home() {
                 </p>
 
                 <div className={styles.grid}>
-                    <Link href="/learn/learn" className={styles.card}>
+                    <Link href="/learn" className={styles.card}>
                         <h2>LearnPage &rarr;</h2>
                         <p>Find in-depth information about Next.js features and API.</p>
                     </Link>
 
-                    <Link href="/Visuals/visuals" className={styles.card}>
+                    <Link href="/visuals" className={styles.card}>
                         <h2>Visuals Page &rarr;</h2>
                         <p>Learn about Next.js in an interactive course with quizzes!</p>
                     </Link>
