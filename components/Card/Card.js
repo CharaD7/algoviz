@@ -18,17 +18,16 @@ const Card = ({ title, content, tags, img }) => {
             <div class="pt-2 pb-4 flex-3 ">
                 <div class="font-bold  text-center text-sm mb-1 text-gray-700">{title}</div>
                 <hr />
-                <p class="text-gray-400 text-sm pt-2">{content}</p>
+                <p class="text-gray-400 text-sm pt-2 line-clamp-6">{content}</p>
             </div>
             {tags && tags.length > 0 && (
-                <div class="flex flex-row pt-1 pb-1 flex-2 flex-wrap max-h-10">
+                <div class="pt-1 pb-1 flex-2 flex-wrap max-h-10">
                     {tags.map((tag, index) => {
                         return (
-                            <span
-                                key={`${tag}-${index}`}
-                                class=" bg-gray-200 rounded-full px-3 text-xs  text-gray-700 mr-1 mb-1 inline-block flex-1 sm:w-24"
-                            >
-                                #{tag}
+                            <span key={`${tag}-${index}`} class="mr-1 mb-1 sm:w-24">
+                                <span class=" bg-gray-200 px-3 rounded-full text-xs  text-gray-700 whitespace-nowrap">
+                                    #{tag}
+                                </span>
                             </span>
                         );
                     })}
