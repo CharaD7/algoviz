@@ -65,12 +65,42 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
+/* .grid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+} */
+
+.grid {
+  display: grid;
+  column-gap: 50px;
+  grid-auto-rows: 30%;
+}
+
+.grid-container {
+  display: inline-grid;
+}
+
+.cardgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    list-style: none;
+  }
+
+/* .cardGrid {
+  row-gap: 10px;
+  grid-auto-rows: 200px; */
+  /* display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly; */
+  /* width: ; */
+
+/* } */
+.blurred {
+  backdrop-filter: blur(10px);
 }
 
 .card {
