@@ -90,6 +90,7 @@ module.exports = {
                     ['~pages', './pages'],
                     ['~components', './components'],
                     ['~styles', './styles'],
+                    ['~utils', './utils'],
                 ],
                 exceptions: ['*.module.css', '.lintstagedrc.js'],
                 extensions: ['.js', '.jsx'],
